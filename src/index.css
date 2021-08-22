@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.wrapper {
+  padding-top: 5rem;
+  margin: 0 auto;
+  width: 600px;
+  align-items: center;
+}
+
+.wrapper h1 {
+  text-align: center;
+}
+
+.item-list {
+  display: flex;
+  position: relative;
+  height: 2rem;
+  border: 1px solid gray;
+  border-bottom: 3px solid darkgray;
+  border-radius: .5rem;
+  padding: 10px;
+  margin-bottom: 5px;
+  justify-content: space-between;
+  transition: 1s;
+  overflow: hidden;
+  user-select: none;
+}
+
+.item-list span strong {
+  margin-right: 5px;
+}
+
+.completed {
+  background-color: rgba(0, 100, 25, .5);
+  border: 1px solid transparent;
+  border-bottom: 3px solid transparent;
+  transform: scale(0.98);
+  transition: 1s;
+}
+
+.delete-todo-icon {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  color: white;
+  z-index: 1000;
+}
+
+.delete-todo-icon:hover {
+  background-color: #FF886F;
+}
+
+.item-list span {
+  display: flex;
+  position: relative;
+  width: 90%;
+  height: 100%;
+  align-items: center;
+  justify-content: start;
+}
+
+.add-todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  width: 100%;
+  height: 40px;
+  margin-top: 40px;
+}
+
+.add-todo-container input {
+  width: 16%;
+  height: 1.5rem;
+  border: 0;
+  border-bottom: 1px solid lightseagreen;
+  text-decoration: none;
+  transition: .5s;
+  outline: none;
+}
+
+.add-todo-container input:focus {
+  transition: .5s;
+  font-size: large;
+  border: 0;
+  border-bottom: 2px solid lightseagreen;
+  width: 80%;
+  padding: 3px;
+}
+
+.add-todo-container button {
+  border: 0;
+  border-radius: 2px;
+  background-color: lightgreen;
+  width: 15%;
+  height: 43px;
+}
+
+.add-todo-container button:hover {
+  transition: .5s;
+  background-color: rgb(1, 209, 1);
+  transform: translateY(-4px);
+  border-bottom: 2px solid darkgreen;
+}
+
+.deleting-todo {
+  transition: .5s;
+  transform: translateX(500px);
+}
+
+.empty-list-label {
+  text-align: center;
+  color: gray;
+  
+}
+
+/*--------------------------------------- Loader */
+
+.lds-ripple {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 4px solid #cef;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 36px;
+    left: 36px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
