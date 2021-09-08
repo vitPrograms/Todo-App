@@ -96,7 +96,6 @@ code {
 
 .add-todo-container input:focus {
   transition: .5s;
-  font-size: large;
   border: 0;
   border-bottom: 2px solid lightseagreen;
   width: 80%;
@@ -114,7 +113,6 @@ code {
 .add-todo-container button:hover {
   transition: .5s;
   background-color: rgb(1, 209, 1);
-  transform: translateY(-4px);
   border-bottom: 2px solid darkgreen;
 }
 
