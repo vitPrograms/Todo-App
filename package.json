@@ -14,8 +14,8 @@
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "start": "react-app-rewired  start",
-    "build": "react-app-rewired  build",
+    "start": "react-app-rewired start",
+    "build": "rd /s/q \"deployment/static\" 2> nul & react-scripts build && md \"deployment/static\" && move \"build\" \"deployment/static\"",
     "test": "react-app-rewired  test --env=jsdom-fourteen",
     "eject": "react-scripts eject"
   },
