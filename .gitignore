@@ -23,5 +23,3 @@ yarn-debug.log*
 yarn-error.log*
 .vs
 public/robots.txt
-package-lock.json
-package.json
