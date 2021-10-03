@@ -164,3 +164,71 @@ code {
     opacity: 0;
   }
 }
+
+
+/* MEDIA */
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding-top: 2rem;
+    width: 100%;
+  }
+
+  .item-list {
+    display: flex;
+    position: relative;
+    height: 2rem;
+    border: 1px solid gray;
+    border-bottom: 3px solid darkgray;
+    border-radius: .5rem;
+    padding: 10px;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    transition: 1s;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  .add-todo-container {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
+    background-color: rgba(0, 0, 0, .1);
+    z-index: 1000;
+  }
+
+  .add-todo-container input {
+    width: 80%;
+    height: 1.5rem;
+    border: 0;
+    border-bottom: 1px solid lightseagreen;
+    text-decoration: none;
+    transition: .5s;
+    outline: none;
+  }
+  
+  .add-todo-container input:focus {
+    transition: .5s;
+    border: 0;
+    border-bottom: 2px solid lightseagreen;
+  }
+  
+  .add-todo-container button {
+    border: 0;
+    border-radius: 2px;
+    background-color: lightgreen;
+    width: fit-content;
+    padding: 5px;
+  }
+  
+  .add-todo-container button:hover {
+    transition: .5s;
+    background-color: rgb(1, 209, 1);
+    border-bottom: 2px solid darkgreen;
+  }
+}
